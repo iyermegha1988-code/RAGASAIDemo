@@ -1,23 +1,26 @@
 AI Response Evaluation Framework
+Overview
 
-This project is a QA automation framework built using Python + RAGAS to evaluate the quality and authenticity of AI-generated responses in RAG (Retrieval-Augmented Generation) systems.
+AI Response Evaluation Framework is a QA automation solution built using Python + RAGAS to evaluate the quality, reliability, and authenticity of AI-generated responses in RAG (Retrieval-Augmented Generation) systems.
 
-Objective
+The framework enables QA teams to validate AI outputs using automated evaluation metrics and helps identify issues such as hallucinations, poor retrieval quality, and irrelevant or factually incorrect responses.
 
-The framework helps QA teams validate AI responses by calculating metrics such as:
+Key Objectives
 
-Faithfulness
-Context Precision
-Context Recall
-Factual Correctness
-Answer Relevancy
+The framework evaluates AI responses using the following metrics:
 
-It helps identify:
+✅ Faithfulness
+✅ Context Precision
+✅ Context Recall
+✅ Factual Correctness
+✅ Answer Relevancy
 
-Hallucinations
-Incorrect answers
-Poor retrieval quality
-Irrelevant AI responses
+This helps teams detect:
+
+❌ Hallucinated responses
+❌ Incorrect or misleading answers
+❌ Weak retrieval quality
+❌ Irrelevant AI-generated outputs
 Tech Stack
 Python
 Pytest
@@ -33,3 +36,23 @@ Project Structure
 ├── utils.py
 ├── testData.json
 └── conftest.py
+Framework Capabilities
+Faithfulness Validation
+
+Checks whether the AI-generated answer is grounded in the retrieved context.
+
+Context Precision
+
+Measures how relevant the retrieved context is to the generated response.
+
+Context Recall
+
+Validates whether the retrieved context contains all the necessary information required to answer the question.
+
+Factual Correctness
+
+Evaluates whether the generated answer is factually accurate.
+
+Answer Relevancy
+
+Ensures the response directly addresses the user query without unnecessary or unrelated information.
